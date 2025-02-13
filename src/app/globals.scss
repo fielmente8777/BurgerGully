@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@font-face {
+  font-family: "Thiket Regular";
+  src: url(/fonts/Thiket-Regular.otf) format("opentype");
+}
+
+.thiket {
+  font-family: "Thiket Regular", sans-serif;
+  font-optical-sizing: auto;
+}
+.nunito {
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+}
+
+:root {
+  --font-body: nunito;
+  --font-heading: thiket;
+}
+
+* {
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0.48rem;
+}
+::-webkit-scrollbar-button {
+  background-color: #18685c;
+  border-radius: 0.7rem;
+  border: 1px solid #ffefe3;
+}
+::-webkit-scrollbar-corner {
+  border-radius: 50%;
+}
+::-webkit-scrollbar-track {
+  background-color: #c17362;
+  margin-block: 0.1rem;
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #18685c;
+  border-radius: 1rem;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .thiket {
+    font-family: "Thiket Regular";
+    font-optical-sizing: auto;
+  }
+  .no-spinner::-webkit-outer-spin-button,
+  .no-spinner::-webkit-inner-spin-button {
+    @apply appearance-none;
+    margin: 0;
+  }
+
+  .no-spinner {
+    @apply appearance-none;
+  }
+
+  .box_shadow {
+    background: #fff;
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+  }
+
+  .max-width {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+
+    @media screen and (max-width: 770px) {
+      padding: 0 1.2rem;
+    }
+  }
+  .max-screen {
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .largeHeading {
+    font-size: 4.5rem;
+    line-height: 0.65;
+    @media screen and (max-width: 640px) {
+      font-size: 2.5rem;
+    }
+  }
+  .mediumHeading {
+    font-size: 2rem;
+    line-height: normal;
+    @media screen and (max-width: 640px) {
+      font-size: 1.5rem;
+    }
+  }
+  .heading1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    @media screen and (max-width: 640px) {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+  }
+  .description1 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    @media screen and (max-width: 640px) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+  .description2 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    @media screen and (max-width: 640px) {
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+    }
+  }
+  .description3 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    @media screen and (max-width: 640px) {
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+    }
+  }
+}
+.our_features_swiper {
+  .pagination,
+  .pagination_1,
+  .pagination_2 {
+    .swiper-pagination-bullet {
+      background-color: #0095a5;
+      width: 0.7rem;
+      height: 0.7rem;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      border: 1px solid #1f1f1f;
+      margin: 0.2rem;
+      background-color: #0095a5;
+      width: 0.7rem;
+      height: 0.7rem;
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #2a2a2a;
+    background-color: #fff;
+    width: 3rem;
+    height: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after {
+      font-size: 1rem;
+      font-weight: 800;
+    }
+    @media screen and (max-width: 640px) {
+
+      width: 2rem;
+      height: 2rem;
+      &::after {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .swiper-button-next{
+      right: 0;
+    }
+    .swiper-button-prev{
+      left: 0;
+    }
+  }
+}
