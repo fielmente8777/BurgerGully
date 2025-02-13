@@ -40,8 +40,8 @@ const TwoColGridCard: React.FC<AboutUsDataProps> = ({
         >
           {title && (
             <div className="flex flex-col gap-0 max-w-xs">
-              <h2 className="capitalize text-extra mediumHeading p-0 m-0 thiket">
-                <span className="text-secondary heading1 ">{subtitle} </span>
+              <h2 className="capitalize text-extra mediumHeading p-0 m-0 thiket font-semibold">
+                <span className="text-secondary heading1 font-normal">{subtitle} </span>
                 {title}
               </h2>
               <h3 className="capitalize text-secondary heading1 text-end p-0 -mt-2">{subtitle2}</h3>
