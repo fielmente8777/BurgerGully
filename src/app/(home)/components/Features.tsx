@@ -10,14 +10,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const Features: React.FC<FeaturesDataProps> = ({ title, desc, cards }) => {
   return (
-    <SectionWithContainer sectionClassName="box_shadow">
+    <SectionWithContainer sectionClassName="box_shadow" sectionId="features">
       <div className="flex flex-col w-full overflow-hidden">
         <MainHeading
           title={title}
-          className="text-tertiary text-center mediumHeading thiket uppercase tracking-tighter font-semibold"
+          className="text-tertiary text-center mediumHeading thiket uppercase letter_spacing font-semibold"
         />
         <Paragraph text={desc} className="text-center heading1" />
-        <div className="lg:grid hidden grid-cols-3 gap-20 items-center justify-center mt-12 relative">
+        <div className="lg:grid hidden grid-cols-3 gap-20  mt-12 relative">
           {cards.map((card) => (
             <FeatureCard key={card.id} {...card} />
           ))}

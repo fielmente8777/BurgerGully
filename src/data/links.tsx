@@ -18,27 +18,27 @@ export const NavLink: navLinkProps[] = [
   {
     id: 3,
     label: "Features",
-    href: "#",
+    href: "#features",
   },
   {
     id: 4,
     label: "Our Featured Dishes",
-    href: "#",
+    href: "#our_featured_dishes",
   },
   {
     id: 5,
     label: "Reviews",
-    href: "#",
+    href: "#reviews",
   },
   {
     id: 6,
     label: "Gallery",
-    href: "#",
+    href: "#gallery",
   },
   {
     id: 7,
     label: "Contact Us",
-    href: "#",
+    href: "#contact_us",
   },
 ];
 
@@ -47,13 +47,13 @@ export const SocialLink: socialLinkProps[] = [
     id: 1,
     label: "facebook",
     icon: <FillFacebook />,
-    href: "",
+    href: "https://www.facebook.com/people/Burger-Gully-Kolkata/61559753117983/#",
   },
   {
     id: 2,
     label: "instagram",
     icon: <FillInstagram />,
-    href: "",
+    href: "https://www.instagram.com/burgergullykolkata/?hl=en",
   },
 ];
 
@@ -70,27 +70,27 @@ export const FooterLink: footerLinkProps[] = [
       {
         id: 2,
         label: "Features",
-        href: "#",
+        href: "#features",
       },
       {
         id: 3,
         label: "Our Featured Dishes",
-        href: "#",
+        href: "#our_featured_dishes",
       },
       {
         id: 4,
         label: "Reviews",
-        href: "#",
+        href: "#reviews",
       },
       {
         id: 5,
         label: "Gallery",
-        href: "#",
+        href: "#gallery",
       },
       {
         id: 6,
         label: "Contact Us",
-        href: "#",
+        href: "#contact_us",
       },
     ],
   },

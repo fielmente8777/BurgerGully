@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const ContactUs = () => {
   return (
-    <Section lgpy={"16"}>
+    <Section lgpy={"16"} id="contact_us">
       <Section>
         <div className="relative w-full aspect-[4/1.3]">
           <Image
@@ -19,7 +19,7 @@ const ContactUs = () => {
             <Container>
               <div className="grid grid-cols-3 gap-6 items-center justify-center">
                 <div className="col-span-1"></div>
-                <div className="col-span-1 relative -top-24 z-20 w-full h-full">
+                <div className="col-span-1 relative -top-20 z-20 w-full h-full">
                   <div className="absolute top-0 left-0 w-full z-20">
                     <div className="relative w-full aspect-[4/6]">
                       <Image

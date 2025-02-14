@@ -5,7 +5,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 const Testimonials: React.FC = () => {
   return (
-    <SectionWithContainer>
+    <SectionWithContainer sectionId="reviews">
       <div className="w-full h-full bg-tertiary rotate-1 rounded-lg">
         <div className="w-full h-full bg-white p-8 -rotate-1 rounded-lg">
           <SliderSwip

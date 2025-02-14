@@ -71,6 +71,8 @@ const Navbar: React.FC = () => {
                 <li key={link.id} className="">
                   <Link
                     href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
                     className="text-secondary border-2 border-secondary w-8 h-8 aspect-square rounded-full flex justify-center items-center hover:bg-secondary hover:text-white transition-colors duration-300 ease-in-out"
                   >
                     <span className="sr-only">{link.label}</span>

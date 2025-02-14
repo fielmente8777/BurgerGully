@@ -14,12 +14,12 @@ const OurFeatures: React.FC<OurFeaturesDataProps> = ({
   images,
 }) => {
   return (
-    <SectionWithContainer>
+    <SectionWithContainer sectionId="our_featured_dishes">
       <div className="flex flex-col items-center justify-center w-full lg:gap-14 gap-7 our_features_swiper">
         <div className="">
           <MainHeading
             title={title}
-            className="text-tertiary text-center mediumHeading thiket uppercase tracking-tighter font-semibold"
+            className="text-tertiary text-center mediumHeading thiket uppercase letter_spacing font-semibold"
           />
           <Paragraph
             text={desc}

@@ -12,7 +12,7 @@ const About: React.FC<AboutUsDataProps> = ({
   href,
 }) => {
   return (
-    <SectionWithContainer>
+    <SectionWithContainer sectionId="about">
       <TwoColGridCard
         title={title}
         subtitle={subtitle}

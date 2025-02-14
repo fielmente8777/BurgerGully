@@ -30,7 +30,7 @@ const Banner: React.FC<BannerProps> = ({
             <div className="flex flex-col items-center justify-center max-w-2xl w-full">
               <div className="flex flex-col gap-0">
                 <p className="text-tertiary">{subtitle}</p>
-                <h1 className="text-tertiary largeHeading thiket uppercase tracking-tighter">
+                <h1 className="text-tertiary largeHeading thiket uppercase letter_spacing font-semibold">
                   {title}
                 </h1>
                 <p className="text-tertiary text-end">{subtitle2}</p>
