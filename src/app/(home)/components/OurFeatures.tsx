@@ -16,26 +16,26 @@ const OurFeatures: React.FC<OurFeaturesDataProps> = ({
   return (
     <SectionWithContainer sectionId="our_featured_dishes">
       <div className="flex flex-col items-center justify-center w-full lg:gap-14 gap-7 our_features_swiper">
-        <div className="">
+        <div className="flex flex-col items-center justify-center w-full gap-2">
           <MainHeading
             title={title}
-            className="text-tertiary text-center mediumHeading thiket uppercase letter_spacing font-semibold"
+            className="text-tertiary text-center mediumHeading thiket  letter_spacing "
           />
           <Paragraph
             text={desc}
-            className="text-secondary text-center heading1"
+            className="text-secondary text-center lg:heading1"
           />
         </div>
         <div className="w-full">
           <Swiper
-            slidesPerView={1.1}
+            slidesPerView={1}
             spaceBetween={12}
             modules={[Navigation, Pagination]}
             navigation
             pagination={{ clickable: true, el: ".pagination" }}
             breakpoints={{
               640: {
-                slidesPerView: 1.3,
+                slidesPerView: 1,
                 spaceBetween: 24,
               },
               768: {
@@ -48,7 +48,7 @@ const OurFeatures: React.FC<OurFeaturesDataProps> = ({
             {images.map((image) => (
               <SwiperSlide
                 key={image.id}
-                className="w-full relative lg:aspect-[4/2.2] aspect-video rounded-lg overflow-hidden"
+                className="w-full relative lg:aspect-[4/2.2] aspect-[4/2.5] rounded-lg overflow-hidden"
               >
                 <Image
                   src={image.src}
@@ -57,7 +57,7 @@ const OurFeatures: React.FC<OurFeaturesDataProps> = ({
                   className="object-cover"
                   sizes="100vw"
                 />
-                <p className="absolute bottom-4 right-4 text-secondary description1 text-sm font-semibold bg-white/70 px-2 py-1 rounded-md">
+                <p className="absolute bottom-4 right-4 text-secondary description1 text-sm  bg-white/70 px-2 py-1 rounded-md">
                   {image.title}
                 </p>
               </SwiperSlide>

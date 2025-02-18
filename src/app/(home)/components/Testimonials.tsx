@@ -5,19 +5,20 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 const Testimonials: React.FC = () => {
   return (
-    <SectionWithContainer sectionId="reviews">
-      <div className="w-full h-full bg-tertiary rotate-1 rounded-lg">
-        <div className="w-full h-full bg-white p-8 -rotate-1 rounded-lg">
-          <SliderSwip
-            data={[1, 2, 3]}
-            modules={[Pagination, Autoplay]}
-            autoplay={{ delay: 2000 }}
-          >
-            {() => <TestimonialCard />}
-          </SliderSwip>
-          {/* <TestimonialCard /> */}
-        </div>
+    <SectionWithContainer sectionId="reviews" containerClassName="relative" sectionClassName="lg:pt-28">
+      <div className="w-full h-full lg:p-8 max-sm:pt-7 max-sm:pb-14 rounded-lg box_shadow relative z-10 our_features_swiper">
+        <SliderSwip
+          data={[1, 2, 3]}
+          modules={[Pagination, Autoplay]}
+          autoplay={{ delay: 2000 }}
+          pagination={{ clickable: true, el: ".pagination_3" }}
+        >
+          {() => <TestimonialCard />}
+        </SliderSwip>
+        {/* <TestimonialCard /> */}
+        <div className="pagination_2 absolute flex items-center justify-center gap-3 left-5 lg:left-[38%] lg:bottom-14 bottom-8 z-20"></div>
       </div>
+      <div className="absolute lg:top-0 -top-4 lg:left-2 left-10 lg:rotate-3 -rotate-3 max-width1 h-[22rem] w-full bg-tertiary rounded-lg"></div>
     </SectionWithContainer>
   );
 };

@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const ContactUs = () => {
   return (
-    <Section lgpy={"16"} id="contact_us">
+    <Section lgpy={"16"} py="4" className="lg:mt-12" id="contact_us">
       <Section>
-        <div className="relative w-full aspect-[4/1.3]">
+        <div className="relative w-full lg:aspect-[4/1.4] aspect-[4/6.3]">
           <Image
             src={imageUrl + "img5.webp"}
             alt="contact us"
@@ -17,9 +17,9 @@ const ContactUs = () => {
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center justify-center">
             <Container>
-              <div className="grid grid-cols-3 gap-6 items-center justify-center">
-                <div className="col-span-1"></div>
-                <div className="col-span-1 relative -top-20 z-20 w-full h-full">
+              <div className="lg:grid flex w-full grid-cols-3 gap-6 items-center justify-center">
+                <div className="col-span-1 lg:block hidden"></div>
+                <div className="col-span-1 relative -top-20 z-20 w-full h-full lg:block hidden">
                   <div className="absolute top-0 left-0 w-full z-20">
                     <div className="relative w-full aspect-[4/6]">
                       <Image
@@ -32,7 +32,7 @@ const ContactUs = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-span-1">
+                <div className="lg:col-span-1 w-full">
                   <Form />
                 </div>
               </div>

@@ -41,7 +41,7 @@ const PopupForm = ({ setShowModal, showModal }) => {
             <div className="flex flex-col gap-3 max-w-3xl w-full shadow-2xl p-4 relative rounded-md">
               <button
                 onClick={closeModal}
-                className="absolute top-[22px] lg:top-0 right-[3px] w-8 h-8 flex justify-center items-center text-lg rounded-full bg-primary hover:bg-primary/90 font-bold text-bgclr"
+                className="absolute top-[22px] lg:top-0 right-[3px] w-8 h-8 flex justify-center items-center text-lg rounded-full bg-primary hover:bg-primary/90  text-bgclr"
               >
                 <IoCloseSharp />
               </button>

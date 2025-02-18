@@ -14,6 +14,7 @@ const Form = () => {
     userMessage: "",
     userPhone: "",
     countryCode: "+91",
+    noOfPersons: "",
   });
   const [formRes, setFormRes] = useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
@@ -68,7 +69,7 @@ const Form = () => {
           email: formData.userEmail,
           Name: formData.userName,
           Contact: `${formData.userPhone}`,
-          Description: formData.userMessage,
+          Description: `${`"no of persons: ${formData.noOfPersons}"`}\n${formData.userMessage}`,
         },
         {
           headers: {
@@ -84,6 +85,7 @@ const Form = () => {
           userMessage: "",
           userPhone: "",
           countryCode: "+91",
+          noOfPersons: "",
         });
         setFormRes(false);
         // router.push("/thank-you/");
@@ -105,10 +107,7 @@ const Form = () => {
       id="contact"
     >
       <div>
-        <MainHeading
-          title="Book a Table"
-          className="heading1 thiket font-semibold text-tertiary"
-        />
+        <MainHeading title="Book a Table" className="heading1 text-tertiary" />
       </div>
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-3 bg-white rounded-lg overflow-hidden">
@@ -116,7 +115,7 @@ const Form = () => {
             id="Name"
             type="text"
             name="userName"
-            placeholder="Name"
+            placeholder="Full Name*"
             value={formData.userName}
             onChange={handleChange}
             required
@@ -141,7 +140,7 @@ const Form = () => {
           <input
             type="text"
             name="userPhone"
-            placeholder="Phone"
+            placeholder="Phone Number*"
             value={formData.userPhone}
             onChange={handleChange}
             required
@@ -154,7 +153,7 @@ const Form = () => {
           <input
             type="text"
             name="userEmail"
-            placeholder="Email"
+            placeholder="Email Address"
             value={formData.userEmail}
             onChange={handleChange}
             required
@@ -164,11 +163,23 @@ const Form = () => {
         {emailErrorMessage && (
           <p className="text-red-500">{emailErrorMessage}</p>
         )}
+        <div className="flex items-center gap-3 bg-white rounded-lg overflow-hidden">
+          <input
+            id="numberOfPersons"
+            type="number"
+            name="noOfPersons"
+            placeholder="Number of Persons"
+            value={formData.noOfPersons}
+            onChange={handleChange}
+            required
+            className="w-full h-max p-2 outline-none bg-transparent"
+          />
+        </div>
 
         <div className="flex gap-3 bg-white rounded-lg overflow-hidden">
           <textarea
             name="userMessage"
-            placeholder="Message"
+            placeholder="Any Message!"
             value={formData.userMessage}
             onChange={handleChange}
             rows={5}
@@ -178,7 +189,7 @@ const Form = () => {
       </div>
       <button
         type="submit"
-        className="bg-secondary text-sm text-white px-5 py-3 font-normal capitalize hover:bg-secondary/80 duration-500 rounded-full border"
+        className="bg-secondary text-sm text-white px-5 py-3 font-normal  hover:bg-secondary/80 duration-500 rounded-full border"
       >
         {formRes ? "Loading...." : "Submit"}
       </button>

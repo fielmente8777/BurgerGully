@@ -54,7 +54,7 @@ export const pageData = {
         id: 3,
         title: "Fresh, Quality Ingredients",
         subtitle:
-          "Every burger is made with premium, locally sourced ingredients to ensure each bite bursts with flavor. We prioritize freshness, bringing you the best in every burger.t",
+          "Every burger is made with premium, locally sourced ingredients to ensure each bite bursts with flavor. We prioritize freshness, bringing you the best in every burger.",
         icon: <FreshQualityIngredients />,
       },
     ],

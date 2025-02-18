@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { FeaturesDataProps } from "@/@types/types";
 import {
   FeatureCard,
@@ -6,24 +6,24 @@ import {
   Paragraph,
   SectionWithContainer,
 } from "@/components";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
 const Features: React.FC<FeaturesDataProps> = ({ title, desc, cards }) => {
   return (
     <SectionWithContainer sectionClassName="box_shadow" sectionId="features">
-      <div className="flex flex-col w-full overflow-hidden">
+      <div className="flex flex-col gap-2 w-full overflow-hidden">
         <MainHeading
           title={title}
-          className="text-tertiary text-center mediumHeading thiket uppercase letter_spacing font-semibold"
+          className="text-tertiary text-center mediumHeading thiket"
         />
-        <Paragraph text={desc} className="text-center heading1" />
-        <div className="lg:grid hidden grid-cols-3 gap-20  mt-12 relative">
+        <Paragraph text={desc} className="text-center lg:heading1" />
+        <div className="grid lg:grid-cols-3  grid-cols-1 gap-20  mt-12 relative">
           {cards.map((card) => (
             <FeatureCard key={card.id} {...card} />
           ))}
-          <div className="border-t-2 border-tertiary border-dashed w-full absolute top-[4.5rem]"/>
+          <div className="border-t-2 border-tertiary border-dashed w-full absolute top-[4.5rem] lg:block hidden"/>
         </div>
-        <div className="w-full mt-12 lg:hidden">
+        {/* <div className="w-full mt-12 lg:hidden">
           <Swiper
             slidesPerView={1}
             spaceBetween={10}
@@ -45,7 +45,7 @@ const Features: React.FC<FeaturesDataProps> = ({ title, desc, cards }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </div> */}
       </div>
     </SectionWithContainer>
   );

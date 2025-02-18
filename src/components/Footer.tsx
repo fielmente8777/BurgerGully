@@ -9,9 +9,9 @@ const Footer = () => {
 
   return (
     <footer className="max-screen w-full">
-      <SectionWithContainer sectionClassName="bg-primary">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-between lg:gap-10 w-full gap-8">
-          <div className="flex flex-col max-sm:items-center max-sm:justify-center w-full lg:gap-8 gap-4">
+      <SectionWithContainer sectionClassName="bg-primary !pb-4">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-between lg:gap-10 w-full gap-6">
+          <div className="flex flex-col max-sm:items-center max-sm:justify-center w-full lg:gap-8">
             <div className="flex items-start justify-start max-sm:items-center max-sm:justify-center w-full">
               <Link href="#" className="h-[10.5rem] aspect-[4/3.5] relative">
                 <Image
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
           {FooterLink.slice(0, 2).map((item) => (
             <div key={item.id} className="flex flex-col gap-2">
-              <h2 className="text-2xl capitalize text-tertiary heading1 thiket font-semibold letter_spacing">
+              <h2 className="text-2xl  text-tertiary heading1 thiket  letter_spacing">
                 {item.title}
               </h2>
               <ul className="flex flex-col gap-2">
@@ -54,13 +54,9 @@ const Footer = () => {
                       className="description2 text-light transition-all"
                     >
                       {link.title && (
-                        <b className="capitalize">{link.title} : </b>
+                        <b className="capitalize font-bold">{link.title} : </b>
                       )}
-                      <span
-                        className={
-                          item.title === "quick links" ? "capitalize" : ""
-                        }
-                      >
+                      <span className={item.title === "quick links" ? "" : ""}>
                         {link.label}
                       </span>
                     </Link>
@@ -82,7 +78,7 @@ const Footer = () => {
           ))}
           {FooterLink.slice(2, 3).map((item) => (
             <div key={item.id} className="flex flex-col gap-2">
-              <h2 className="text-2xl capitalize text-tertiary heading1 thiket font-semibold letter_spacing">
+              <h2 className="text-2xl  text-tertiary heading1 thiket  letter_spacing">
                 {item.title}
               </h2>
               {item.links.map((link) => (
@@ -90,22 +86,23 @@ const Footer = () => {
                   key={link.id}
                   className="description2 text-light flex gap-4"
                 >
-                  {link.title && <b className="capitalize">{link.title} :</b>}
+                  {link.title && <b className="">{link.title} :</b>}
                   <div className="flex flex-col gap-2">
-                    <span className="capitalize">{link.label}</span>
-                    <span className="capitalize">{link.href}</span>
+                    <span className="">{link.label}</span>
+                    <span className="">{link.href}</span>
                   </div>
                 </div>
               ))}
             </div>
           ))}
         </div>
-        <div className="bg-light w-full h-[1px] lg:my-6 my-8" />
-        <div className="flex max-md:flex-col items-center justify-between gap-4">
-          <p className="">
-            © {currentYear} Burger Gully. All Rights Reserved. Designed &
-            Developed by{" "}
-            <Link href="https://eazotel.com" className="font-semibold">
+        <div className="bg-light w-full h-[1px] lg:my-6 my-6" />
+        <div className="flex max-md:flex-col items-center lg:justify-between gap-4">
+          <p className="text-center">
+            © {currentYear} Burger Gully. <br className="lg:hidden" />
+            All Rights Reserved. <br className="lg:hidden" />
+            Designed & Developed by{" "}
+            <Link href="https://eazotel.com" className="font-bold">
               Eazotel
             </Link>
           </p>

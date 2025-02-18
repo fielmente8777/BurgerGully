@@ -3,10 +3,11 @@ import Link from "next/link";
 import Container from "../SectionComponents/Container";
 import { NavLink, SocialLink } from "@/data/links";
 import Image from "next/image";
-import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import MobileNav from "./MobileNav";
+import { MenuBurger, Outlinecall } from "@/icons/icons";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
@@ -26,19 +27,12 @@ const Navbar: React.FC = () => {
     <header className="">
       <Container>
         <nav className="flex items-center justify-between">
-          <div className="lg:hidden block">
-            {isOpen ? (
-              <IoMdClose
-                onClick={() => setIsOpen(false)}
-                className="text-3xl cursor-pointer"
-              />
-            ) : (
-              <CiMenuBurger
-                onClick={() => setIsOpen(true)}
-                className="text-3xl cursor-pointer"
-              />
-            )}
-          </div>
+          <button
+            className={`text-4xl lg:hidden ${isOpen ? "rotate-90" : ""} transition-all duration-300 ease-in-out`}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <IoMdClose /> : <MenuBurger />}
+          </button>
           <div className="">
             <Link
               href="#"
@@ -58,14 +52,14 @@ const Navbar: React.FC = () => {
               <li key={link.id} className="">
                 <Link
                   href={link.href}
-                  className={`${pathname === link.href ? "text-secondary" : ""} capitalize`}
+                  className={`${pathname === link.href ? "text-secondary" : ""} `}
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
-          <div className="">
+          <div className="lg:flex hidden items-center">
             <ul className="flex items-center gap-4">
               {SocialLink.map((link) => (
                 <li key={link.id} className="">
@@ -82,8 +76,15 @@ const Navbar: React.FC = () => {
               ))}
             </ul>
           </div>
+          <div className="lg:hidden block">
+            <Link href="tel:911234567890">
+              <span className="sr-only">call</span>
+              <Outlinecall />
+            </Link>
+          </div>
         </nav>
       </Container>
+      <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
     </header>
   );
 };
