@@ -16,6 +16,9 @@ export default {
         textdark: "#4D4D4D",
         extra: "#0095A5",
       },
+      fontFamily: {
+        sans: ["var(--font-custom)", "system-ui", "sans-serif"],
+      },
     },
   },
   plugins: [],

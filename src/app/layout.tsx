@@ -3,6 +3,20 @@ import { Geist, Nunito } from "next/font/google";
 import "./globals.scss";
 import { Call, Footer, Navbar, Whatsapp } from "@/components";
 
+import localFont from "next/font/local";
+
+const thicketRegular = localFont({
+  src: [
+    {
+      path: '../../public/fonts/ThicketRegular.otf',
+      weight: '400',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-custom' 
+});
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${nunito.variable} antialiased`}
+        className={`${geistSans.variable} ${nunito.variable} ${thicketRegular.variable} antialiased`}
         suppressHydrationWarning={true}
       >
         <Navbar />

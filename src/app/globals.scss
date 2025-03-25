@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Thiket Regular";
-  src: url(/fonts/Thiket-Regular.otf) format("opentype");
+  src: url(/fonts/ThicketRegular.otf) format("opentype");
 }
 
 .thiket {
@@ -158,10 +158,6 @@
   .pagination_1,
   .pagination_2,
   .pagination_3 {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // gap: 0.4rem;
 
     .swiper-pagination-bullet {
       width: 0.5rem;

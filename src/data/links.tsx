@@ -60,7 +60,7 @@ export const SocialLink: socialLinkProps[] = [
 export const FooterLink: footerLinkProps[] = [
   {
     id: 1,
-    title: "quick links",
+    title: "Quick Links",
     links: [
       {
         id: 1,
@@ -96,7 +96,7 @@ export const FooterLink: footerLinkProps[] = [
   },
   {
     id: 2,
-    title: "get in touch",
+    title: "Get In Touch",
     links: [
       {
         id: 1,
@@ -121,7 +121,7 @@ export const FooterLink: footerLinkProps[] = [
   },
   {
     id: 3,
-    title: "opening hours",
+    title: "Opening Hours",
     links: [
       {
         id: 1,
